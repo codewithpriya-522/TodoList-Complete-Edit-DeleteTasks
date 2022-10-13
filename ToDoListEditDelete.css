@@ -1,0 +1,133 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-style: oblique;
+    background-color: #bcc6d4;
+    height: 100vh;
+}
+#todos{
+    width: 40%;
+    min-width: 450px;
+    min-height: 100px;
+    top: 50%;
+    left: 50%;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: #444462;
+}
+.todo-input-container
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.todo_input
+{
+    width: 75%;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 1px solid #d1d3d4;
+}
+.todo_input:focus{
+    outline: none;
+    border-color: rgb(88, 88, 184);   
+}
+
+.add-item,.deleteBtn{
+    position: absolute;
+    right: 58px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 43px;
+    background-color: rgb(22, 41, 102);
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+}
+.add-item:nth-child(2){
+    right: 97px;
+}
+#todos > .todo-list-container{
+    list-style: none;
+    margin: 10px 0 0;
+}
+#todos > .todo-list-container .todo-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#todos > .todo-list-container .todo-list .todo-item{
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+#todos > .todo-list-container .todo-list .button{
+    position: absolute;
+    right: 0;
+}
+#todos > .todo-list-container .todo-list .button button{
+    width: 40px;
+    height: 50px;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+#todos > .todo-list-container .todo-list .button .complete{
+    background-color: #3ec282;
+}
+#todos > .todo-list-container .todo-list .button .btnTrash{
+    background-color: #e72727;
+}
+
+#todos > .todo-list-container .todo-list .button button i{
+    pointer-events: none;
+}
+.fall{
+    opacity: 0 !important;
+    transform: translateY(30px);
+    transition: .5s;
+}
+.line_through{
+    text-decoration: line-through;
+    opacity: 0.7;
+    transition: .3s;
+}
+
+.btnEdit{
+    background-color: rgb(86, 62, 193);
+}
+
+@media screen and (max-width: 600px){
+    #todos{
+        width: 100%;
+    }
+}
+
